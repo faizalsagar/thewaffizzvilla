@@ -4,3 +4,337 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fffaf3;
+  color: #222;
+}
+
+.navbar {
+  padding: 20px 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+}
+
+.navLinks a {
+  margin: 0 16px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.navLinks a:hover {
+  color: #7a2f00;
+}
+.hero {
+    background-image: url(images/backgroundfin.png);
+  padding: 100px;
+}
+
+.heroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heroText h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 8em;
+  line-height: 1.1;
+}
+
+.heroText p {
+  font-size: 1.9em;
+  margin: 40px 0;
+  max-width: 600px;
+}
+
+.heroImage img {
+  width: 700px;
+  border-radius: 50%;
+}
+
+.fadeUp {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  background: #f4a62a;
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn:hover {
+  background: #e59315;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(244, 166, 42, 0.4);
+}
+
+.btn::after {
+  content: "→";
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover::after {
+  transform: translateX(4px);
+}
+
+.why {
+  background: linear-gradient(135deg, #fde2b0, #f4a62a);
+  padding: 80px;
+  color: #000;
+  border-radius: 40px;
+  margin: 60px 80px;
+}
+
+.why h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+}
+
+.why p {
+  max-width: 500px;
+  margin: 20px 0;
+}
+
+.menu {
+  padding: 80px;
+}
+
+.menuTitle {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.menuCard {
+  background: #fff;
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.menuCard:hover {
+  transform: translateY(-8px);
+}
+
+.menuCard img {
+  width: 100%;
+  border-radius: 20px;
+}
+.menuCard h3 {
+  margin: 16px 0 8px;
+  font-size: 20px;
+}
+
+.customers {
+  background: linear-gradient(135deg, #fde2b0, #f4a62a);
+  padding: 80px;
+  border-radius: 40px;
+  margin: 60px 80px;
+  position: relative;
+}
+
+.customers h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+.custList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .custList {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cta {
+  padding: 80px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+}
+
+.cta p {
+  margin: 15px 0 25px;
+}
+.contact {
+  padding: 80px;
+}
+
+.contactContainer {
+  display: flex;
+  gap: 50px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactForm input {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  background: #f4a62a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.social-icon:hover {
+  background: #e59315;
+  transform: translateY(-5px);
+}
+.footer {
+  background: #f4a62a;
+  padding: 30px 80px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #000;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+
+  .hero {
+    padding: 60px 40px;
+  }
+
+  .heroContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .heroImage img {
+    width: 320px;
+  }
+
+  .menuGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contactContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navLinks {
+    display: none; /* later we can add hamburger */
+  }
+
+  .heroText h1 {
+    font-size: 44px;
+  }
+
+  .why,
+  .customers {
+    margin: 40px 20px;
+    padding: 40px 20px;
+  }
+
+  .menu {
+    padding: 40px 20px;
+  }
+
+  .menuGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta h2 {
+    font-size: 36px;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
