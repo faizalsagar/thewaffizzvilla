@@ -16,12 +16,13 @@
       <div class="navContainer">
         <div class="logo"><h2>THE WAFFIZZ VILLA</h2></div>
         <nav class="navLinks">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Menu</a>
-          <a href="#">Blog</a>
-          <a href="#">Contact</a>
-        </nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="menu.html">Menu</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
 
         <button class="btn" type="button">Order Now</button>
       </div>
@@ -31,8 +32,8 @@
     <section class="hero">
       <div class="heroContainer">
         <div class="heroText">
-          <h1 class="fadeUp">Waffle<br />Delights</h1>
-          <p class="fadeUp">Your go-to place for mouth-watering waffles!</p>
+          <h1 class="animate fadeUp">Waffle<br />Delights</h1>
+          <p class="animate fadeUp delay-1">Your go-to place for mouth-watering waffles!</p>
         </div>
 
         <div class="heroImage">
@@ -61,9 +62,9 @@
       <div class="menuContainer">
         <h2 class="menuTitle">Our Delicious<br />Waffle Options</h2>
 
-        <div class="menuGrid fadeUp" >
-          <div class="menuCard">
-            <img src="images/img2.jpg"  loading="lazy" alt="Waffle" />
+        <div class="menuGrid">
+          <div class="menuCard animate zoomIn delay-1">
+            <img src="images/img2.jpg" loading="lazy" alt="Waffle" />
             <h3>Chocolate Waffle</h3>
             <p>
               A golden waffle served with Chocolate syrup or toppings of your
@@ -71,7 +72,7 @@
             </p>
           </div>
 
-          <div class="menuCard ">
+          <div class="menuCard animate zoomIn delay-2">
             <img src="images/img1.webp" loading="lazy" alt="Chocolate Waffle" />
             <h3>Double Chocolate Waffle</h3>
             <p>
@@ -80,7 +81,7 @@
             </p>
           </div>
 
-          <div class="menuCard">
+          <div class="menuCard animate zoomIn delay-3">
             <img src="images/img3.jpg" loading="lazy" alt="chocolate waffle" />
             <h3>Triple Waffle</h3>
             <p>
@@ -98,12 +99,12 @@
         <h2>What Our<br />Customers Say</h2>
 
         <div class="custList">
-          <div class="testimonial">
+          <div class="testimonial animate fadeUp delay-1">
             <p>“The best waffles I’ve ever tasted! So fresh and delicious.”</p>
             <span>— Faizal Siddique</span>
           </div>
 
-          <div class="testimonial">
+          <div class="testimonial animate fadeUp delay-2">
             <p>
               “I come here every weekend for their chocolate waffles. A
               must-try!”
@@ -111,7 +112,7 @@
             <span>— Piyush banodhe</span>
           </div>
 
-          <div class="testimonial">
+          <div class="testimonial animate fadeUp delay-3">
             <p>
               “I come here every weekend for their chocolate waffles. A
               must-try!”
@@ -124,13 +125,46 @@
 
     <!-- CTA -->
     <section class="cta">
-      <div class="ctaContainer">
+      <div class="ctaContainer animate zoomIn">
         <h2>Ready for Your Waffle?</h2>
         <p>Order now and enjoy our freshly made waffles at home or in-store!</p>
 
         <button class="btn" type="button">Order Now</button>
       </div>
     </section>
+
+<!-- Location / Map -->
+<section class="location">
+  <div class="locationContainer">
+    <div class="locationInfo animate fadeLeft">
+      <h2>Visit The Waffizz Villa</h2>
+      <p>
+        Come and enjoy freshly made waffles at our store.
+        We are easily accessible and located in the heart of Indore.
+      </p>
+
+      <p class="locationText">
+        📍 Vijay Nagar, Indore, Madhya Pradesh
+      </p>
+
+      <a
+        href="https://maps.google.com/?q=The+Waffizz+Villa+Indore"
+        target="_blank"
+        class="btn">
+        Open in Google Maps
+      </a>
+    </div>
+
+    <div class="mapBox animate fadeRight delay-1">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7360.123456!2d75.8577!3d22.7196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f17!3m3!1m2!1s0x3962fd0020b8ab25%3A0xbc60c817e1fd00c!2sThe%20Waffizz%20Villa!5e0!3m2!1sen!2sin!4v0000000000"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
 
     <!-- Contact -->
     <section class="contact">
@@ -144,12 +178,12 @@
             pariatur a molestiae facilis. Dolorum, facilis? Atque!.
           </p>
           <div class="social-icons">
-          <div class="social-icon">f</div>
-          <div class="social-icon">@</div>
-          <div class="social-icon">in</div>
+            <div class="social-icon">f</div>
+            <div class="social-icon">@</div>
+            <div class="social-icon">in</div>
+          </div>
+
         </div>
-        </div>
-        
 
         <form class="contactForm" action="#" method="post">
           <input type="text" placeholder="Your Name" required />
@@ -158,6 +192,7 @@
           <button class="btn" type="submit">Send</button>
         </form>
       </div>
+    
     </section>
 
     <!-- Footer -->

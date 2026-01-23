@@ -15,7 +15,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: transparent;
+  background: rgba(255, 250, 243, 0.85);
   backdrop-filter: blur(10px);
 }
 
@@ -61,25 +61,11 @@ body {
   font-size: 1.9em;
   margin: 40px 0;
   max-width: 600px;
-}
+} 
 
 .heroImage img {
   width: 700px;
   border-radius: 50%;
-}
-
-.fadeUp {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s ease forwards;
-}
-
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .btn {
@@ -222,6 +208,56 @@ body {
   gap: 50px;
 }
 
+.location {
+  padding: 80px;
+}
+
+.locationContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.locationInfo h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.locationInfo p {
+  max-width: 500px;
+  margin-bottom: 15px;
+}
+
+.locationText {
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.mapBox iframe {
+  width: 100%;
+  height: 380px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .location {
+    padding: 40px 20px;
+  }
+
+  .locationContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .mapBox iframe {
+    height: 300px;
+  }
+}
+
+
 .contactForm {
   display: flex;
   flex-direction: column;
@@ -337,4 +373,51 @@ body {
     gap: 15px;
     text-align: center;
   }
+}
+
+
+/* --------Animations----- */
+/* Base animation state */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* When visible */
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variants */
+.fadeUp { transform: translateY(40px); }
+.fadeDown { transform: translateY(-40px); }
+.fadeLeft { transform: translateX(-40px); }
+.fadeRight { transform: translateX(40px); }
+
+.zoomIn {
+  transform: scale(0.92);
+}
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+.delay-4 { transition-delay: 0.6s; }
+
+
+.notFound {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.notFound h1 {
+  font-size: 8rem;
+  font-family: "Playfair Display", serif;
 }
