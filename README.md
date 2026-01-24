@@ -11,6 +11,7 @@ A modern, responsive, and visually appealing website for **The Waffizz Villa**, 
 - 🎨 Premium typography using Google Fonts
 - 🖼️ Optimized images with lazy loading
 - 🎯 Smooth scroll animations
+- Added google maps location 
 
 ## 🛠️ Built With
 
