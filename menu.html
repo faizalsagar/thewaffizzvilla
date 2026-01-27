@@ -21,7 +21,7 @@
                 <a href="blog.html" class="smooth-scroll">Blog</a>
                 <a href="contact.html" class="smooth-scroll">Contact</a>
             </nav>
-            <button class="btn" type="button">Order Now</button>
+            <button class="btn" type="button" onclick="openWhatsApp()">Order Now</button>
         </div>
     </header>
 
@@ -35,135 +35,45 @@
         </div>
     </section>
 
-    <!-- Menu Categories -->
+    <!-- Menu Items -->
     <section style="padding: 40px 20px; background: #fffaf3;">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 50px; text-align: center;" class="animate fadeUp">Classic Waffles</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 60px;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 50px; text-align: center;" class="animate fadeUp">Our Waffle Collection</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
                 <div class="menuCard animate zoomIn delay-1" style="background: #fff; padding: 20px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
                     <img src="images/img2.jpg" alt="Chocolate Waffle" style="width: 100%; height: 250px; object-fit: cover; border-radius: 16px; margin-bottom: 16px;">
                     <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 8px; color: #7a2f00;">Chocolate Waffle</h3>
-                    <p style="font-size: 14px; color: #666; margin-bottom: 16px;">A golden waffle served with rich chocolate syrup and your choice of toppings. Perfect for chocolate lovers!</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-size: 20px; font-weight: 700; color: #f4a62a;">$8.99</span>
-                        <button class="btn" style="padding: 8px 16px; font-size: 13px;">Add to Order</button>
-                    </div>
+                    <p style="font-size: 14px; color: #666;">A golden waffle served with rich chocolate syrup and your choice of toppings. Perfect for chocolate lovers!</p>
                 </div>
 
                 <div class="menuCard animate zoomIn delay-2" style="background: #fff; padding: 20px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
                     <img src="images/img1.webp" alt="Double Chocolate" style="width: 100%; height: 250px; object-fit: cover; border-radius: 16px; margin-bottom: 16px;">
                     <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 8px; color: #7a2f00;">Double Chocolate Waffle</h3>
-                    <p style="font-size: 14px; color: #666; margin-bottom: 16px;">Rich chocolate waffle topped with two layers of decadent chocolate sauce and whipped cream.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-size: 20px; font-weight: 700; color: #f4a62a;">$10.99</span>
-                        <button class="btn" style="padding: 8px 16px; font-size: 13px;">Add to Order</button>
-                    </div>
+                    <p style="font-size: 14px; color: #666;">Rich chocolate waffle topped with two layers of decadent chocolate sauce and whipped cream.</p>
                 </div>
 
                 <div class="menuCard animate zoomIn delay-3" style="background: #fff; padding: 20px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
                     <img src="images/img3.jpg" alt="Triple Waffle" style="width: 100%; height: 250px; object-fit: cover; border-radius: 16px; margin-bottom: 16px;">
                     <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 8px; color: #7a2f00;">Triple Chocolate Waffle</h3>
-                    <p style="font-size: 14px; color: #666; margin-bottom: 16px;">Our most indulgent creation! Triple chocolate layers with extra toppings for the ultimate waffle experience.</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-size: 20px; font-weight: 700; color: #f4a62a;">$12.99</span>
-                        <button class="btn" style="padding: 8px 16px; font-size: 13px;">Add to Order</button>
-                    </div>
+                    <p style="font-size: 14px; color: #666;">Our most indulgent creation! Triple chocolate layers with extra toppings for the ultimate waffle experience.</p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Premium Waffles -->
-    <section style="padding: 40px 20px;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 50px; text-align: center;" class="animate fadeUp">Premium Selection</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 60px;">
                 <div class="menuCard animate zoomIn delay-1" style="background: #fff; padding: 20px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
                     <img src="images/img1.webp" alt="Strawberry Waffle" style="width: 100%; height: 250px; object-fit: cover; border-radius: 16px; margin-bottom: 16px;">
                     <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 8px; color: #7a2f00;">Strawberry Bliss</h3>
-                    <p style="font-size: 14px; color: #666; margin-bottom: 16px;">Fresh strawberries, whipped cream, and honey drizzle on a crispy golden waffle. A fruity delight!</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-size: 20px; font-weight: 700; color: #f4a62a;">$11.99</span>
-                        <button class="btn" style="padding: 8px 16px; font-size: 13px;">Add to Order</button>
-                    </div>
+                    <p style="font-size: 14px; color: #666;">Fresh strawberries, whipped cream, and honey drizzle on a crispy golden waffle. A fruity delight!</p>
                 </div>
 
                 <div class="menuCard animate zoomIn delay-2" style="background: #fff; padding: 20px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
                     <img src="images/img3.jpg" alt="Honey Walnut" style="width: 100%; height: 250px; object-fit: cover; border-radius: 16px; margin-bottom: 16px;">
                     <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 8px; color: #7a2f00;">Honey Walnut</h3>
-                    <p style="font-size: 14px; color: #666; margin-bottom: 16px;">Crispy walnuts, golden honey, and butter on a perfectly cooked waffle. Sweet and nutty perfection!</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-size: 20px; font-weight: 700; color: #f4a62a;">$10.99</span>
-                        <button class="btn" style="padding: 8px 16px; font-size: 13px;">Add to Order</button>
-                    </div>
+                    <p style="font-size: 14px; color: #666;">Crispy walnuts, golden honey, and butter on a perfectly cooked waffle. Sweet and nutty perfection!</p>
                 </div>
 
                 <div class="menuCard animate zoomIn delay-3" style="background: #fff; padding: 20px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
                     <img src="images/img2.jpg" alt="Caramel Delight" style="width: 100%; height: 250px; object-fit: cover; border-radius: 16px; margin-bottom: 16px;">
                     <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 8px; color: #7a2f00;">Caramel Delight</h3>
-                    <p style="font-size: 14px; color: #666; margin-bottom: 16px;">Rich caramel sauce, pecans, and whipped cream on a warm waffle. Absolutely divine!</p>
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-size: 20px; font-weight: 700; color: #f4a62a;">$11.99</span>
-                        <button class="btn" style="padding: 8px 16px; font-size: 13px;">Add to Order</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Add-ons & Toppings -->
-    <section style="padding: 40px 20px; background: linear-gradient(135deg, #fde2b0, #f4a62a);">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 50px; text-align: center; color: #000;" class="animate fadeUp">Add-ons & Toppings</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                <div style="background: #fff; padding: 16px; border-radius: 12px; text-align: center; cursor: pointer; transition: all 0.3s ease;" class="animate zoomIn delay-1">
-                    <p style="font-weight: 600; margin-bottom: 8px;">Chocolate Sauce</p>
-                    <p style="font-size: 18px; font-weight: 700; color: #f4a62a;">+$1.99</p>
-                </div>
-                <div style="background: #fff; padding: 16px; border-radius: 12px; text-align: center; cursor: pointer; transition: all 0.3s ease;" class="animate zoomIn delay-2">
-                    <p style="font-weight: 600; margin-bottom: 8px;">Whipped Cream</p>
-                    <p style="font-size: 18px; font-weight: 700; color: #f4a62a;">+$0.99</p>
-                </div>
-                <div style="background: #fff; padding: 16px; border-radius: 12px; text-align: center; cursor: pointer; transition: all 0.3s ease;" class="animate zoomIn delay-3">
-                    <p style="font-weight: 600; margin-bottom: 8px;">Fresh Berries</p>
-                    <p style="font-size: 18px; font-weight: 700; color: #f4a62a;">+$2.49</p>
-                </div>
-                <div style="background: #fff; padding: 16px; border-radius: 12px; text-align: center; cursor: pointer; transition: all 0.3s ease;" class="animate zoomIn delay-4">
-                    <p style="font-weight: 600; margin-bottom: 8px;">Honey Drizzle</p>
-                    <p style="font-size: 18px; font-weight: 700; color: #f4a62a;">+$0.99</p>
-                </div>
-                <div style="background: #fff; padding: 16px; border-radius: 12px; text-align: center; cursor: pointer; transition: all 0.3s ease;" class="animate zoomIn delay-1">
-                    <p style="font-weight: 600; margin-bottom: 8px;">Nuts Mix</p>
-                    <p style="font-size: 18px; font-weight: 700; color: #f4a62a;">+$1.49</p>
-                </div>
-                <div style="background: #fff; padding: 16px; border-radius: 12px; text-align: center; cursor: pointer; transition: all 0.3s ease;" class="animate zoomIn delay-2">
-                    <p style="font-weight: 600; margin-bottom: 8px;">Caramel Sauce</p>
-                    <p style="font-size: 18px; font-weight: 700; color: #f4a62a;">+$1.99</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Beverages -->
-    <section style="padding: 40px 20px;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 50px; text-align: center;" class="animate fadeUp">Beverages</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                <div style="background: linear-gradient(135deg, #fde2b0, transparent); padding: 16px; border-radius: 12px; text-align: center;" class="animate zoomIn delay-1">
-                    <p style="font-weight: 600; margin-bottom: 8px;">Coffee</p>
-                    <p style="font-size: 18px; font-weight: 700; color: #f4a62a;">$3.99</p>
-                </div>
-                <div style="background: linear-gradient(135deg, #fde2b0, transparent); padding: 16px; border-radius: 12px; text-align: center;" class="animate zoomIn delay-2">
-                    <p style="font-weight: 600; margin-bottom: 8px;">Hot Chocolate</p>
-                    <p style="font-size: 18px; font-weight: 700; color: #f4a62a;">$4.49</p>
-                </div>
-                <div style="background: linear-gradient(135deg, #fde2b0, transparent); padding: 16px; border-radius: 12px; text-align: center;" class="animate zoomIn delay-3">
-                    <p style="font-weight: 600; margin-bottom: 8px;">Cold Brew</p>
-                    <p style="font-size: 18px; font-weight: 700; color: #f4a62a;">$4.99</p>
-                </div>
-                <div style="background: linear-gradient(135deg, #fde2b0, transparent); padding: 16px; border-radius: 12px; text-align: center;" class="animate zoomIn delay-4">
-                    <p style="font-weight: 600; margin-bottom: 8px;">Smoothie</p>
-                    <p style="font-size: 18px; font-weight: 700; color: #f4a62a;">$5.99</p>
+                    <p style="font-size: 14px; color: #666;">Rich caramel sauce, pecans, and whipped cream on a warm waffle. Absolutely divine!</p>
                 </div>
             </div>
         </div>
@@ -173,8 +83,8 @@
     <section style="padding: 40px 20px;">
         <div style="background: linear-gradient(135deg, #f4a62a, #fde2b0); padding: 50px; border-radius: 30px; text-align: center; max-width: 1000px; margin: 0 auto;">
             <h2 style="font-family: 'Playfair Display', serif; font-size: 44px; margin-bottom: 20px;">Ready to Order?</h2>
-            <p style="font-size: 18px; margin-bottom: 30px; color: #000;">Place your order now and enjoy our delicious waffles!</p>
-            <button class="btn" style="background: #000; color: #f4a62a; padding: 16px 40px; font-size: 16px;">Place Order</button>
+            <p style="font-size: 18px; margin-bottom: 30px; color: #000;">Call us or order via WhatsApp and enjoy our delicious waffles!</p>
+            <button class="btn" onclick="openWhatsApp()" style="padding: 16px 40px; font-size: 16px;">Order via WhatsApp</button>
         </div>
     </section>
 
@@ -196,17 +106,22 @@
             <div class="footerSection">
                 <h3>Follow Us</h3>
                 <div class="socialIcons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com/waffizzVilla" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/waffizzVilla" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/waffizzVilla" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
         <div class="footerBottom">
-            <p>&copy; 2024 The Waffizz Villa. All rights reserved.</p>
+            <p>&copy; 2026 BARGAD MEDIA. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function openWhatsApp() {
+            window.open('https://wa.me/919876543210?text=Hi%20The%20Waffizz%20Villa!%20I%20would%20like%20to%20order%20some%20waffles.', '_blank');
+        }
+    </script>
 </body>
 </html>

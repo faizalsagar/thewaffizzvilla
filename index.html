@@ -28,7 +28,7 @@
                 <a href="contact.html" class="smooth-scroll">Contact</a>
             </nav>
 
-            <button class="btn" type="button">Order Now</button>
+            <button class="btn" type="button" onclick="openWhatsApp()">Order Now</button>
         </div>
     </header>
 
@@ -41,7 +41,7 @@
                 <h1 class="animate fadeUp">Waffle<br>Delights</h1>
                 <p class="animate fadeUp delay-1">Your go-to place for mouth-watering waffles!</p>
                 <div class="heroButtons animate fadeUp delay-2">
-                    <button class="btn">Order Now</button>
+                    <button class="btn" onclick="openWhatsApp()">Order Now</button>
                     <a href="https://maps.google.com/?q=The+Waffizz+Villa+Indore" target="_blank" class="btn-secondary"><i class="fas fa-map-marker-alt"></i> Get Directions</a>
                 </div>
             </div>
@@ -56,7 +56,7 @@
         <div class="whyContainer">
             <h2 class="animate fadeUp">Why Choose Us</h2>
             <p class="animate fadeUp delay-1">Our waffles are made with the finest ingredients, ensuring that each bite is a taste of perfection. Freshly made, customizable toppings, and fast service!</p>
-            <button class="btn animate fadeUp delay-2">Explore More</button>
+            <a href="about.html" class="btn animate fadeUp delay-2">Learn More</a>
         </div>
     </section>
 
@@ -131,7 +131,7 @@
         <div class="ctaContainer animate zoomIn">
             <h2>Ready for Your Waffle?</h2>
             <p>Order now and enjoy our freshly made waffles at home or in-store!</p>
-            <button class="btn">Order Now</button>
+            <button class="btn" onclick="openWhatsApp()">Order Now</button>
         </div>
     </section>
 
@@ -231,9 +231,9 @@
             <div class="footerSection">
                 <h3>Follow Us</h3>
                 <div class="socialIcons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com/waffizzVilla" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/waffizzVilla" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/waffizzVilla" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
@@ -243,5 +243,10 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function openWhatsApp() {
+            window.open('https://wa.me/919876543210?text=Hi%20The%20Waffizz%20Villa!%20I%20would%20like%20to%20order%20some%20waffles.', '_blank');
+        }
+    </script>
 </body>
 </html>
