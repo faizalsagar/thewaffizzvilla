@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - The Waffizz Villa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navContainer">
+            <div class="logo"><h2>🧇 THE WAFFIZZ VILLA</h2></div>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            <nav class="navLinks" id="navLinks">
+                <a href="index.html" class="smooth-scroll">Home</a>
+                <a href="about.html" class="smooth-scroll">About</a>
+                <a href="menu.html" class="smooth-scroll">Menu</a>
+                <a href="blog.html" class="smooth-scroll">Blog</a>
+                <a href="contact.html" class="smooth-scroll">Contact</a>
+            </nav>
+            <button class="btn" type="button">Order Now</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 60px 20px; text-align: center;">
+        <div class="heroContainer" style="grid-template-columns: 1fr;">
+            <div class="heroText">
+                <h1 class="animate fadeUp">Gallery</h1>
+                <p class="animate fadeUp delay-1">Explore our collection of delicious waffles</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightboxClose" onclick="closeLightbox()">&times;</span>
+        <img class="lightboxImg" src="" alt="Expanded image">
+    </div>
+
+    <!-- Gallery Section -->
+    <section style="padding: 60px 20px;">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <div class="galleryGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div class="galleryItem animate zoomIn delay-1" style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); cursor: pointer; aspect-ratio: 1;">
+                    <img src="images/img1.webp" alt="Waffle 1" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="galleryOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                        <button class="galleryBtn" onclick="openLightbox('images/img1.webp')" style="background: #f4a62a; border: none; width: 60px; height: 60px; border-radius: 50%; color: #fff; font-size: 24px; cursor: pointer;"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="galleryItem animate zoomIn delay-2" style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); cursor: pointer; aspect-ratio: 1;">
+                    <img src="images/img2.jpg" alt="Waffle 2" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="galleryOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                        <button class="galleryBtn" onclick="openLightbox('images/img2.jpg')" style="background: #f4a62a; border: none; width: 60px; height: 60px; border-radius: 50%; color: #fff; font-size: 24px; cursor: pointer;"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="galleryItem animate zoomIn delay-3" style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); cursor: pointer; aspect-ratio: 1;">
+                    <img src="images/img3.jpg" alt="Waffle 3" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="galleryOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                        <button class="galleryBtn" onclick="openLightbox('images/img3.jpg')" style="background: #f4a62a; border: none; width: 60px; height: 60px; border-radius: 50%; color: #fff; font-size: 24px; cursor: pointer;"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="galleryItem animate zoomIn delay-4" style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); cursor: pointer; aspect-ratio: 1;">
+                    <img src="images/heroImg.webp" alt="Waffle 4" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="galleryOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                        <button class="galleryBtn" onclick="openLightbox('images/heroImg.webp')" style="background: #f4a62a; border: none; width: 60px; height: 60px; border-radius: 50%; color: #fff; font-size: 24px; cursor: pointer;"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="galleryItem animate zoomIn delay-1" style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); cursor: pointer; aspect-ratio: 1;">
+                    <img src="images/img1.webp" alt="Waffle 5" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="galleryOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                        <button class="galleryBtn" onclick="openLightbox('images/img1.webp')" style="background: #f4a62a; border: none; width: 60px; height: 60px; border-radius: 50%; color: #fff; font-size: 24px; cursor: pointer;"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="galleryItem animate zoomIn delay-2" style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); cursor: pointer; aspect-ratio: 1;">
+                    <img src="images/img2.jpg" alt="Waffle 6" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="galleryOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                        <button class="galleryBtn" onclick="openLightbox('images/img2.jpg')" style="background: #f4a62a; border: none; width: 60px; height: 60px; border-radius: 50%; color: #fff; font-size: 24px; cursor: pointer;"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="galleryItem animate zoomIn delay-3" style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); cursor: pointer; aspect-ratio: 1;">
+                    <img src="images/img3.jpg" alt="Waffle 7" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="galleryOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                        <button class="galleryBtn" onclick="openLightbox('images/img3.jpg')" style="background: #f4a62a; border: none; width: 60px; height: 60px; border-radius: 50%; color: #fff; font-size: 24px; cursor: pointer;"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="galleryItem animate zoomIn delay-4" style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); cursor: pointer; aspect-ratio: 1;">
+                    <img src="images/heroImg.webp" alt="Waffle 8" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="galleryOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                        <button class="galleryBtn" onclick="openLightbox('images/heroImg.webp')" style="background: #f4a62a; border: none; width: 60px; height: 60px; border-radius: 50%; color: #fff; font-size: 24px; cursor: pointer;"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footerContainer">
+            <div class="footerSection">
+                <h3>The Waffizz Villa</h3>
+                <p>Your favorite destination for delicious, freshly made waffles.</p>
+            </div>
+            <div class="footerSection">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footerSection">
+                <h3>Follow Us</h3>
+                <div class="socialIcons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; 2024 The Waffizz Villa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .galleryItem:hover img {
+            transform: scale(1.1);
+        }
+        .galleryItem:hover .galleryOverlay {
+            opacity: 1 !important;
+        }
+    </style>
+
+    <script src="script.js"></script>
+</body>
+</html>

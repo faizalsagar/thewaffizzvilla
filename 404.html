@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found - The Waffizz Villa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .error404 {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(253, 226, 176, 0.3), transparent);
+        }
+        .error404-content {
+            max-width: 600px;
+        }
+        .error404-icon {
+            font-size: 120px;
+            color: #f4a62a;
+            margin-bottom: 30px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .error404 h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(48px, 10vw, 120px);
+            color: #7a2f00;
+            margin-bottom: 15px;
+        }
+        .error404 p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .redirect-info {
+            background: rgba(244, 166, 42, 0.1);
+            border: 2px solid #f4a62a;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 30px 0;
+            font-weight: 600;
+            color: #f4a62a;
+        }
+        .countdown {
+            font-size: 28px;
+            font-weight: 700;
+            color: #f4a62a;
+        }
+    </style>
+</head>
+<body>
+    <section class="error404">
+        <div class="error404-content">
+            <div class="error404-icon">🧇</div>
+            <h1>404</h1>
+            <p>Oops! We couldn't find that waffle...</p>
+            <p style="color: #999; margin-bottom: 30px;">The page you're looking for doesn't exist or has been moved.</p>
+            
+            <div class="redirect-info">
+                <p>Redirecting you home in <span class="countdown" id="countdown">5</span> seconds...</p>
+            </div>
+
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html" class="btn" style="text-decoration: none; display: inline-block;">Go Home Now</a>
+                <button onclick="history.back()" class="btn-secondary" style="text-decoration: none; cursor: pointer;"><i class="fas fa-arrow-left"></i> Go Back</button>
+            </div>
+
+            <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid rgba(244, 166, 42, 0.2);">
+                <p style="color: #999; font-size: 14px; margin-bottom: 15px;">Quick Navigation:</p>
+                <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html" style="color: #f4a62a; text-decoration: none; font-weight: 600;">Home</a>
+                    <span style="color: #ccc;">•</span>
+                    <a href="menu.html" style="color: #f4a62a; text-decoration: none; font-weight: 600;">Menu</a>
+                    <span style="color: #ccc;">•</span>
+                    <a href="about.html" style="color: #f4a62a; text-decoration: none; font-weight: 600;">About</a>
+                    <span style="color: #ccc;">•</span>
+                    <a href="contact.html" style="color: #f4a62a; text-decoration: none; font-weight: 600;">Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Auto-redirect countdown
+        let countdown = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const interval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(interval);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

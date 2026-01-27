@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - The Waffizz Villa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navContainer">
+            <div class="logo"><h2>🧇 THE WAFFIZZ VILLA</h2></div>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            <nav class="navLinks" id="navLinks">
+                <a href="index.html" class="smooth-scroll">Home</a>
+                <a href="about.html" class="smooth-scroll">About</a>
+                <a href="menu.html" class="smooth-scroll">Menu</a>
+                <a href="blog.html" class="smooth-scroll">Blog</a>
+                <a href="contact.html" class="smooth-scroll">Contact</a>
+            </nav>
+            <button class="btn" type="button">Order Now</button>
+        </div>
+    </header>
+
+    <section class="hero" style="padding: 60px 20px; text-align: center;">
+        <div class="heroContainer" style="grid-template-columns: 1fr;">
+            <div class="heroText">
+                <h1 class="animate fadeUp">Blog</h1>
+                <p class="animate fadeUp delay-1">Recipes, tips, and stories from The Waffizz Villa</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 60px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <button class="filterBtn" style="padding: 10px 20px; margin: 0 10px; background: #f4a62a; border: none; border-radius: 25px; cursor: pointer; font-weight: 600;" onclick="filterBlogs('all')">All</button>
+                <button class="filterBtn" style="padding: 10px 20px; margin: 0 10px; background: transparent; border: 2px solid #f4a62a; border-radius: 25px; cursor: pointer; font-weight: 600;" onclick="filterBlogs('recipes')">Recipes</button>
+                <button class="filterBtn" style="padding: 10px 20px; margin: 0 10px; background: transparent; border: 2px solid #f4a62a; border-radius: 25px; cursor: pointer; font-weight: 600;" onclick="filterBlogs('tips')">Tips</button>
+                <button class="filterBtn" style="padding: 10px 20px; margin: 0 10px; background: transparent; border: 2px solid #f4a62a; border-radius: 25px; cursor: pointer; font-weight: 600;" onclick="filterBlogs('stories')">Stories</button>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <div class="blogCard animate zoomIn delay-1" data-category="recipes" style="background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                    <div style="font-size: 80px; text-align: center; padding: 30px; background: #fde2b0;">🍓</div>
+                    <div style="padding: 20px;">
+                        <span style="background: #f4a62a; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Recipe</span>
+                        <h3 style="margin: 15px 0; font-size: 22px;">Berry Bliss Waffle</h3>
+                        <p style="color: #666; margin-bottom: 10px; font-size: 14px;">Learn how to make our signature berry-topped waffle with fresh strawberries and whipped cream.</p>
+                        <div style="font-size: 12px; color: #999;">📅 Jan 15, 2024 • 5 min read</div>
+                    </div>
+                </div>
+
+                <div class="blogCard animate zoomIn delay-2" data-category="recipes" style="background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                    <div style="font-size: 80px; text-align: center; padding: 30px; background: #fde2b0;">🍫</div>
+                    <div style="padding: 20px;">
+                        <span style="background: #f4a62a; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Recipe</span>
+                        <h3 style="margin: 15px 0; font-size: 22px;">Triple Chocolate Delight</h3>
+                        <p style="color: #666; margin-bottom: 10px; font-size: 14px;">Our most decadent creation featuring three layers of chocolate goodness.</p>
+                        <div style="font-size: 12px; color: #999;">📅 Jan 18, 2024 • 7 min read</div>
+                    </div>
+                </div>
+
+                <div class="blogCard animate zoomIn delay-3" data-category="tips" style="background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                    <div style="font-size: 80px; text-align: center; padding: 30px; background: #fde2b0;">💡</div>
+                    <div style="padding: 20px;">
+                        <span style="background: #f4a62a; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Tips</span>
+                        <h3 style="margin: 15px 0; font-size: 22px;">Perfect Waffle Texture</h3>
+                        <p style="color: #666; margin-bottom: 10px; font-size: 14px;">Pro tips to achieve the perfect crispy outside and fluffy inside every time.</p>
+                        <div style="font-size: 12px; color: #999;">📅 Jan 20, 2024 • 4 min read</div>
+                    </div>
+                </div>
+
+                <div class="blogCard animate zoomIn delay-4" data-category="stories" style="background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                    <div style="font-size: 80px; text-align: center; padding: 30px; background: #fde2b0;">👨‍👩‍👧</div>
+                    <div style="padding: 20px;">
+                        <span style="background: #f4a62a; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Story</span>
+                        <h3 style="margin: 15px 0; font-size: 22px;">Customer Stories</h3>
+                        <p style="color: #666; margin-bottom: 10px; font-size: 14px;">Heartwarming stories from our loyal customers about their waffle moments.</p>
+                        <div style="font-size: 12px; color: #999;">📅 Jan 22, 2024 • 6 min read</div>
+                    </div>
+                </div>
+
+                <div class="blogCard animate zoomIn delay-1" data-category="tips" style="background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                    <div style="font-size: 80px; text-align: center; padding: 30px; background: #fde2b0;">🎨</div>
+                    <div style="padding: 20px;">
+                        <span style="background: #f4a62a; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Tips</span>
+                        <h3 style="margin: 15px 0; font-size: 22px;">Topping Combinations</h3>
+                        <p style="color: #666; margin-bottom: 10px; font-size: 14px;">Creative topping ideas that will take your waffle experience to the next level.</p>
+                        <div style="font-size: 12px; color: #999;">📅 Jan 25, 2024 • 5 min read</div>
+                    </div>
+                </div>
+
+                <div class="blogCard animate zoomIn delay-2" data-category="recipes" style="background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                    <div style="font-size: 80px; text-align: center; padding: 30px; background: #fde2b0;">🍯</div>
+                    <div style="padding: 20px;">
+                        <span style="background: #f4a62a; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Recipe</span>
+                        <h3 style="margin: 15px 0; font-size: 22px;">Honey Walnut Special</h3>
+                        <p style="color: #666; margin-bottom: 10px; font-size: 14px;">A delightful combination of honey, walnuts, and cream that's simply irresistible.</p>
+                        <div style="font-size: 12px; color: #999;">📅 Jan 28, 2024 • 5 min read</div>
+                    </div>
+                </div>
+
+                <div class="blogCard animate zoomIn delay-3" data-category="stories" style="background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                    <div style="font-size: 80px; text-align: center; padding: 30px; background: #fde2b0;">🎉</div>
+                    <div style="padding: 20px;">
+                        <span style="background: #f4a62a; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Story</span>
+                        <h3 style="margin: 15px 0; font-size: 22px;">Our Anniversary</h3>
+                        <p style="color: #666; margin-bottom: 10px; font-size: 14px;">Celebrating 4 years of serving delicious waffles to our amazing community.</p>
+                        <div style="font-size: 12px; color: #999;">📅 Feb 1, 2024 • 4 min read</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footerContainer">
+            <div class="footerSection">
+                <h3>The Waffizz Villa</h3>
+                <p>Your favorite destination for delicious waffles.</p>
+            </div>
+            <div class="footerSection">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footerSection">
+                <h3>Follow Us</h3>
+                <div class="socialIcons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; 2024 The Waffizz Villa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterBlogs(category) {
+            const cards = document.querySelectorAll('.blogCard');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

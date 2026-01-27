@@ -1,215 +1,247 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Waffizz Villa</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Navbar -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Waffizz Villa - Premium Waffles</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar with Hamburger Menu -->
     <header class="navbar">
-      <div class="navContainer">
-        <div class="logo"><h2>THE WAFFIZZ VILLA</h2></div>
-        <nav class="navLinks">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="menu.html">Menu</a>
-  <a href="blog.html">Blog</a>
-  <a href="contact.html">Contact</a>
-</nav>
+        <div class="navContainer">
+            <div class="logo"><h2>THE WAFFIZZ VILLA</h2></div>
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
+            <nav class="navLinks" id="navLinks">
+                <a href="#home" class="smooth-scroll">Home</a>
+                <a href="about.html" class="smooth-scroll">About</a>
+                <a href="menu.html" class="smooth-scroll">Menu</a>
+                <a href="blog.html" class="smooth-scroll">Blog</a>
+                <a href="contact.html" class="smooth-scroll">Contact</a>
+            </nav>
 
-        <button class="btn" type="button">Order Now</button>
-      </div>
+            <button class="btn" type="button">Order Now</button>
+        </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="heroContainer">
-        <div class="heroText">
-          <h1 class="animate fadeUp">Waffle<br />Delights</h1>
-          <p class="animate fadeUp delay-1">Your go-to place for mouth-watering waffles!</p>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="heroDoodle"></div>
+        <div class="heroContainer">
+            <div class="heroText">
+                <span class="heroBadge animate fadeUp">🧇 Freshly Made</span>
+                <h1 class="animate fadeUp">Waffle<br>Delights</h1>
+                <p class="animate fadeUp delay-1">Your go-to place for mouth-watering waffles!</p>
+                <div class="heroButtons animate fadeUp delay-2">
+                    <button class="btn">Order Now</button>
+                    <a href="https://maps.google.com/?q=The+Waffizz+Villa+Indore" target="_blank" class="btn-secondary"><i class="fas fa-map-marker-alt"></i> Get Directions</a>
+                </div>
+            </div>
+            <div class="heroImage">
+                <img src="images/heroImg.webp" loading="lazy" alt="Fresh waffles">
+            </div>
         </div>
-
-        <div class="heroImage">
-          <img src="images/heroImg.webp" loading="lazy" alt="Fresh waffles" />
-        </div>
-      </div>
     </section>
 
     <!-- Why Choose Us -->
     <section class="why">
-      <div class="whyContainer">
-        <h2>Why<br />Choose Us</h2>
-
-        <p>
-          Our waffles are made with the finest ingredients, ensuring that each
-          bite is a taste of perfection. Freshly made, customizable toppings,
-          and fast service!
-        </p>
-
-        <button class="btn">See more</button>
-      </div>
-    </section>
-
-    <!-- Waffle Options -->
-    <section class="menu">
-      <div class="menuContainer">
-        <h2 class="menuTitle">Our Delicious<br />Waffle Options</h2>
-
-        <div class="menuGrid">
-          <div class="menuCard animate zoomIn delay-1">
-            <img src="images/img2.jpg" loading="lazy" alt="Waffle" />
-            <h3>Chocolate Waffle</h3>
-            <p>
-              A golden waffle served with Chocolate syrup or toppings of your
-              choice.
-            </p>
-          </div>
-
-          <div class="menuCard animate zoomIn delay-2">
-            <img src="images/img1.webp" loading="lazy" alt="Chocolate Waffle" />
-            <h3>Double Chocolate Waffle</h3>
-            <p>
-              Rich chocolate waffle topped with Two Chocolates on a crispy
-              waffle..
-            </p>
-          </div>
-
-          <div class="menuCard animate zoomIn delay-3">
-            <img src="images/img3.jpg" loading="lazy" alt="chocolate waffle" />
-            <h3>Triple Waffle</h3>
-            <p>
-              Rich chocolate waffle topped with Three Chocolates on a crispy
-              waffle.
-            </p>
-          </div>
+        <div class="whyContainer">
+            <h2 class="animate fadeUp">Why Choose Us</h2>
+            <p class="animate fadeUp delay-1">Our waffles are made with the finest ingredients, ensuring that each bite is a taste of perfection. Freshly made, customizable toppings, and fast service!</p>
+            <button class="btn animate fadeUp delay-2">Explore More</button>
         </div>
-      </div>
     </section>
 
-    <!-- Customers -->
-    <section class="customers">
-      <div class="custContainer">
-        <h2>What Our<br />Customers Say</h2>
-
-        <div class="custList">
-          <div class="testimonial animate fadeUp delay-1">
-            <p>“The best waffles I’ve ever tasted! So fresh and delicious.”</p>
-            <span>— Faizal Siddique</span>
-          </div>
-
-          <div class="testimonial animate fadeUp delay-2">
-            <p>
-              “I come here every weekend for their chocolate waffles. A
-              must-try!”
-            </p>
-            <span>— Piyush banodhe</span>
-          </div>
-
-          <div class="testimonial animate fadeUp delay-3">
-            <p>
-              “I come here every weekend for their chocolate waffles. A
-              must-try!”
-            </p>
-            <span>— Mateen khan</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-      <div class="ctaContainer animate zoomIn">
-        <h2>Ready for Your Waffle?</h2>
-        <p>Order now and enjoy our freshly made waffles at home or in-store!</p>
-
-        <button class="btn" type="button">Order Now</button>
-      </div>
-    </section>
-
-<!-- Location / Map -->
-<section class="location">
-  <div class="locationContainer">
-    <div class="locationInfo animate fadeLeft">
-      <h2>Visit The Waffizz Villa</h2>
-      <p>
-        Come and enjoy freshly made waffles at our store.
-        We are easily accessible and located in the heart of Indore.
-      </p>
-
-      <p class="locationText">
-        📍 Vijay Nagar, Indore, Madhya Pradesh
-      </p>
-
-      <a
-        href="https://maps.google.com/?q=The+Waffizz+Villa+Indore"
-        target="_blank"
-        class="btn">
-        Open in Google Maps
-      </a>
-    </div>
-
-    <div class="mapBox animate fadeRight delay-1">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7360.123456!2d75.8577!3d22.7196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f17!3m3!1m2!1s0x3962fd0020b8ab25%3A0xbc60c817e1fd00c!2sThe%20Waffizz%20Villa!5e0!3m2!1sen!2sin!4v0000000000"
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </div>
-</section>
-
-    <!-- Contact -->
-    <section class="contact">
-      <div class="contactContainer">
-        <div class="contactInfo">
-          <h2>Contact Us</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            deserunt aliquam dolores temporibus accusamus nesciunt maiores
-            necessitatibus ex esse, omnis perspiciatis cupiditate, maxime
-            pariatur a molestiae facilis. Dolorum, facilis? Atque!.
-          </p>
-          <div class="social-icons">
-            <div class="social-icon">f</div>
-            <div class="social-icon">@</div>
-            <div class="social-icon">in</div>
-          </div>
-
-        </div>
-
-        <form class="contactForm" action="#" method="post">
-          <input type="text" placeholder="Your Name" required />
-          <input type="tel" placeholder="Your Phone Number" required />
-          <input type="email" placeholder="Your Email" required />
-          <button class="btn" type="submit">Send</button>
-        </form>
-      </div>
     
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightboxClose" onclick="closeLightbox()">&times;</span>
+        <img class="lightboxImg" src="" alt="Expanded image">
+    </div>
+
+    <!-- Menu -->
+    <section class="menu">
+        <div class="menuContainer">
+            <h2 class="animate fadeUp">Our Delicious Waffle Options</h2>
+            <div class="menuGrid">
+                <div class="menuCard animate zoomIn delay-1">
+                    <img src="images/img2.jpg" alt="Chocolate Waffle">
+                    <h3>Chocolate Waffle</h3>
+                    <p>Golden waffle with rich chocolate syrup.</p>
+                </div>
+                <div class="menuCard animate zoomIn delay-2">
+                    <img src="images/img1.webp" alt="Double Chocolate">
+                    <h3>Double Chocolate Waffle</h3>
+                    <p>Double chocolate heaven on crispy waffle.</p>
+                </div>
+                <div class="menuCard animate zoomIn delay-3">
+                    <img src="images/img3.jpg" alt="Triple Waffle">
+                    <h3>Triple Waffle</h3>
+                    <p>Ultimate chocolate experience in every bite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider -->
+    <section class="testimonials">
+        <div class="testimonialsContainer">
+            <h2 class="animate fadeUp">What Our Customers Say</h2>
+            <div class="sliderWrapper">
+                <div class="testimonialSlider">
+                    <div class="slide animate fadeUp">
+                        <p class="testimonialText">"The best waffles I've ever tasted! So fresh and delicious."</p>
+                        <span class="testimonialAuthor">— Faizal Siddique</span>
+                    </div>
+                    <div class="slide animate fadeUp">
+                        <p class="testimonialText">"I come here every weekend for their chocolate waffles. A must-try!"</p>
+                        <span class="testimonialAuthor">— Piyush Banodhe</span>
+                    </div>
+                    <div class="slide animate fadeUp">
+                        <p class="testimonialText">"Amazing customer service and incredible taste. Highly recommended!"</p>
+                        <span class="testimonialAuthor">— Mateen Khan</span>
+                    </div>
+                    <div class="slide animate fadeUp">
+                        <p class="testimonialText">"Worth every penny! Best waffle experience in the city."</p>
+                        <span class="testimonialAuthor">— Sarah Johnson</span>
+                    </div>
+                </div>
+                <button class="sliderBtn prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="sliderBtn next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="sliderDots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="ctaContainer animate zoomIn">
+            <h2>Ready for Your Waffle?</h2>
+            <p>Order now and enjoy our freshly made waffles at home or in-store!</p>
+            <button class="btn">Order Now</button>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location">
+        <div class="locationContainer">
+            <div class="locationInfo animate fadeLeft">
+                <h2>Visit The Waffizz Villa</h2>
+                <p>Come and enjoy freshly made waffles at our store. We are easily accessible and located in the heart of Indore.</p>
+                <p class="locationText"><i class="fas fa-map-marker-alt"></i> Vijay Nagar, Indore, Madhya Pradesh</p>
+                <p class="locationText"><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p class="locationText"><i class="fas fa-clock"></i> Mon-Sun: 10:00 AM - 10:00 PM</p>
+                <a href="https://maps.google.com/?q=The+Waffizz+Villa+Indore" target="_blank" class="btn">Get Directions</a>
+            </div>
+            <div class="mapBox animate fadeRight">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.0215046385053!2d75.86789992346906!3d22.72057179999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396440d5e5d5d5d5%3A0x1234567890abcdef!2sVijay%20Nagar%2C%20Indore!5e0!3m2!1sen!2sin!4v=" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="galleryContainer">
+            <h2 class="animate fadeUp">Our Gallery</h2>
+            <div class="galleryGrid">
+                <div class="galleryItem animate zoomIn delay-1">
+                    <img src="images/img1.webp" alt="Waffle 1">
+                    <div class="galleryOverlay">
+                        <button class="galleryBtn" onclick="openLightbox('images/img1.webp')"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="galleryItem animate zoomIn delay-2">
+                    <img src="images/img2.jpg" alt="Waffle 2">
+                    <div class="galleryOverlay">
+                        <button class="galleryBtn" onclick="openLightbox('images/img2.jpg')"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="galleryItem animate zoomIn delay-3">
+                    <img src="images/img3.jpg" alt="Waffle 3">
+                    <div class="galleryOverlay">
+                        <button class="galleryBtn" onclick="openLightbox('images/img3.jpg')"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="galleryItem animate zoomIn delay-4">
+                    <img src="images/heroImg.webp" alt="Waffle 4">
+                    <div class="galleryOverlay">
+                        <button class="galleryBtn" onclick="openLightbox('images/heroImg.webp')"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="gallery.html" class="btn animate fadeUp delay-1">View More Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Preview -->
+    <section class="contactPreview">
+        <div class="contactContainer">
+            <h2 class="animate fadeUp">Get In Touch</h2>
+            <div class="contactInfo">
+                <div class="contactCard animate zoomIn delay-1">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@waffizzVilla.com">info@waffizzVilla.com</a></p>
+                </div>
+                <div class="contactCard animate zoomIn delay-2">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                </div>
+                <div class="contactCard animate zoomIn delay-3">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Vijay Nagar, Indore</p>
+                </div>
+            </div>
+            <a href="contact.html" class="btn animate fadeUp delay-2">Send Message</a>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footerContainer">
-        <p>© 2026 BARGAD MEDIA . All rights reserved.</p>
-
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Menu</a>
-          <a href="#">Contact</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Privacy Policy</a>
-        </nav>
-      </div>
+        <div class="footerContainer">
+            <div class="footerSection">
+                <h3>The Waffizz Villa</h3>
+                <p>Your favorite destination for delicious, freshly made waffles.</p>
+            </div>
+            <div class="footerSection">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footerSection">
+                <h3>Follow Us</h3>
+                <div class="socialIcons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; 2026 BARGAD MEDIA. All rights reserved.</p>
+        </div>
     </footer>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
