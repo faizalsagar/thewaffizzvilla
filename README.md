@@ -8,6 +8,7 @@ A **stunning, modern, and fully responsive** website for **The Waffizz Villa**, 
 
 ## 🌟 About The Website
 
+<<<<<<< HEAD
 The Waffizz Villa website is designed to captivate customers with its premium branding, intuitive navigation, and visually appealing layout. The site features a modern hero section with dynamic imagery, comprehensive menu showcasing our signature waffles, customer testimonials, and easy access to location and contact information.
 
 **Perfect for:**
@@ -72,6 +73,14 @@ The Waffizz Villa website is designed to captivate customers with its premium br
 9. **Footer** – Navigation links and social media
 
 ---
+=======
+- 🍽️ Clean & modern UI design
+- 📱 Fully responsive (Desktop, Tablet, Mobile)
+- 🎨 Premium typography using Google Fonts
+- 🖼️ Optimized images with lazy loading
+- 🎯 Smooth scroll animations
+- Added google maps location 
+>>>>>>> 1672d51b2175a0f31923e34976e14c09b2b3a3d9
 
 ## 🛠️ Built With
 
