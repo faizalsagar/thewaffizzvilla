@@ -9,6 +9,9 @@ body {
   background: #fffaf3;
   color: #222;
   overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ========== NAVBAR ========== */
@@ -98,11 +101,13 @@ body {
   font-weight: 600;
   font-size: clamp(13px, 1.2vw, 15px);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
 }
 
 .btn:hover {
@@ -110,6 +115,10 @@ body {
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(244, 166, 42, 0.4);
+}
+
+.btn:active {
+  transform: translateY(0);
 }
 
 /* ========== HERO ========== */
@@ -395,8 +404,11 @@ body {
   padding: clamp(20px, 3vw, 30px);
   border-radius: 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .menuCard:hover {
@@ -424,6 +436,7 @@ body {
   color: #666;
   line-height: 1.6;
   margin-bottom: 16px;
+  flex-grow: 1;
 }
 
 .price {
@@ -904,62 +917,518 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 15px clamp(15px, 4vw, 30px);
+    padding: 12px clamp(12px, 3vw, 25px);
+  }
+
+  .navContainer {
+    gap: 10px;
+  }
+
+  .btn {
+    padding: clamp(8px, 1.2vw, 12px) clamp(16px, 2.5vw, 28px);
+    font-size: clamp(12px, 1vw, 14px);
   }
 
   .navLinks {
     max-height: 0;
   }
 
+  .navLinks.active {
+    max-height: 350px;
+    padding: 15px 0;
+  }
+
+  /* Hero Improvements */
+  .hero {
+    padding: clamp(30px, 6vw, 60px) clamp(15px, 4vw, 40px);
+    padding-bottom: clamp(40px, 8vw, 100px);
+  }
+
+  .heroContainer {
+    gap: clamp(20px, 3vw, 40px);
+  }
+
   .heroText h1 {
     text-align: center;
+    font-size: clamp(32px, 6vw, 70px);
+  }
+
+  .heroText p {
+    text-align: center;
+    font-size: clamp(14px, 2vw, 18px);
+  }
+
+  .heroButtons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, 2vw, 15px);
+  }
+
+  .btn-secondary {
+    padding: clamp(8px, 1.2vw, 12px) clamp(16px, 2.5vw, 28px);
+    font-size: clamp(12px, 1vw, 14px);
   }
 
   .heroImage {
-    text-align: center;
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    margin-top: clamp(20px, 3vw, 30px);
+  }
+
+  .heroImage img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Section Padding */
+  .why,
+  .testimonials,
+  .gallery,
+  .menu,
+  .location,
+  .contactPreview,
+  .cta {
+    padding: clamp(35px, 5vw, 60px) clamp(15px, 4vw, 40px);
   }
 
   .why,
   .testimonials {
-    margin: clamp(30px, 4vw, 60px) clamp(15px, 4vw, 40px);
-    padding: clamp(40px, 6vw, 60px) clamp(15px, 4vw, 40px);
+    margin: clamp(25px, 3vw, 50px) clamp(15px, 3vw, 40px);
   }
 
+  /* Grid Adjustments */
   .menuGrid,
+  .galleryGrid,
   .contactInfo {
     grid-template-columns: 1fr;
-  }
-
-  .sliderBtn {
-    display: none;
-  }
-
-  .gallery {
-    padding: clamp(40px, 6vw, 60px) clamp(15px, 4vw, 40px);
+    gap: clamp(15px, 2.5vw, 30px);
   }
 
   .galleryGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .galleryItem {
+    aspect-ratio: 1;
+  }
+
+  /* Card Improvements */
+  .menuCard {
+    padding: clamp(15px, 2.5vw, 25px);
+  }
+
+  .menuCard img {
+    height: clamp(180px, 40vw, 250px);
+    margin-bottom: 12px;
+  }
+
+  .menuCard h3 {
+    font-size: clamp(16px, 1.8vw, 20px);
+  }
+
+  .menuCard p {
+    font-size: clamp(12px, 1.1vw, 14px);
+    margin-bottom: 12px;
+  }
+
+  /* Slider Buttons */
+  .sliderBtn {
+    display: none;
+  }
+
+  .slide {
+    min-height: 200px;
+    padding: clamp(20px, 3vw, 40px);
+  }
+
+  .testimonialText {
+    font-size: clamp(14px, 1.8vw, 18px);
+    margin-bottom: 15px;
+  }
+
+  /* Location Map */
+  .locationContainer {
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 3vw, 40px);
+  }
+
+  .mapBox iframe {
+    height: clamp(250px, 60vw, 350px);
+  }
+
+  .locationText {
+    font-size: clamp(12px, 1.2vw, 14px);
+    margin: clamp(10px, 1.5vw, 15px) 0;
+  }
+
+  /* Contact Cards */
+  .contactCard {
+    padding: clamp(20px, 3vw, 35px);
+  }
+
+  .contactCard i {
+    font-size: clamp(28px, 4vw, 40px);
+  }
+
+  .contactCard h3 {
+    font-size: clamp(16px, 1.8vw, 20px);
+  }
+
+  /* CTA Section */
+  .ctaContainer {
+    padding: clamp(30px, 4vw, 60px);
+  }
+
+  .ctaContainer h2 {
+    font-size: clamp(24px, 3.5vw, 36px);
+  }
+
+  .ctaContainer p {
+    font-size: clamp(13px, 1.3vw, 16px);
+  }
+
+  /* Heading Sizes */
+  .galleryContainer > h2,
+  .menuContainer > h2,
+  .testimonialsContainer > h2,
+  .contactContainer > h2 {
+    font-size: clamp(28px, 4.5vw, 42px);
+    margin-bottom: clamp(25px, 4vw, 45px);
+  }
+
+  .why h2,
+  .locationInfo h2 {
+    font-size: clamp(26px, 4vw, 40px);
+  }
+
+  /* Footer */
+  .footer {
+    padding: clamp(30px, 4vw, 60px) clamp(15px, 4vw, 40px);
+  }
+
+  .footerContainer {
+    gap: clamp(20px, 3vw, 40px);
+  }
+
+  .footerSection h3 {
+    font-size: clamp(16px, 1.8vw, 20px);
+  }
+
+  .footerSection p,
+  .footerSection a {
+    font-size: clamp(12px, 1vw, 14px);
+  }
+
+  .socialIcons {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .socialIcons a {
+    width: 38px;
+    height: 38px;
+  }
+
+  .footerBottom {
+    font-size: clamp(11px, 0.9vw, 13px);
+    padding-top: clamp(15px, 2vw, 25px);
+  }
 }
 
 @media (max-width: 480px) {
-  .logo h2 {
-    font-size: 18px;
+  * {
+    -webkit-tap-highlight-color: transparent;
   }
 
-  .navLinks.active {
-    max-height: 400px;
+  body {
+    font-size: 16px;
+  }
+
+  .navbar {
+    padding: 10px clamp(10px, 3vw, 20px);
+  }
+
+  .logo h2 {
+    font-size: clamp(16px, 3.5vw, 22px);
+    word-break: break-word;
+  }
+
+  .btn {
+    padding: clamp(8px, 1vw, 11px) clamp(14px, 2vw, 24px);
+    font-size: clamp(11px, 0.9vw, 13px);
+    border-radius: 25px;
+  }
+
+  .hamburger span {
+    width: 22px;
+    height: 2.5px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: clamp(25px, 4vw, 50px) clamp(12px, 3vw, 30px);
+    padding-bottom: clamp(30px, 6vw, 80px);
+  }
+
+  .heroBadge {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin-bottom: 15px;
+  }
+
+  .heroText h1 {
+    font-size: clamp(28px, 5vw, 50px);
+    margin-bottom: clamp(15px, 2vw, 25px);
+    line-height: 1.15;
+  }
+
+  .heroText p {
+    font-size: clamp(13px, 1.8vw, 16px);
+    margin-bottom: clamp(20px, 3vw, 35px);
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    gap: clamp(10px, 2vw, 12px);
+    align-items: stretch;
+  }
+
+  .btn-secondary {
+    padding: clamp(8px, 1vw, 11px) clamp(14px, 2vw, 24px);
+    font-size: clamp(11px, 0.9vw, 13px);
+  }
+
+  .heroImage {
+    width: 100%;
+    margin-top: clamp(15px, 2vw, 25px);
+  }
+
+  /* Sections */
+  .why,
+  .testimonials,
+  .gallery,
+  .menu,
+  .location,
+  .contactPreview,
+  .cta {
+    padding: clamp(25px, 4vw, 50px) clamp(12px, 3vw, 30px);
+  }
+
+  .why,
+  .testimonials {
+    margin: clamp(20px, 2.5vw, 40px) clamp(12px, 2.5vw, 30px);
+    border-radius: 30px;
+    padding: clamp(25px, 4vw, 50px) clamp(12px, 3vw, 30px);
+  }
+
+  /* Headings */
+  .galleryContainer > h2,
+  .menuContainer > h2,
+  .testimonialsContainer > h2,
+  .contactContainer > h2 {
+    font-size: clamp(24px, 4vw, 36px);
+    margin-bottom: clamp(20px, 3vw, 35px);
+    text-align: center;
+  }
+
+  .why h2,
+  .locationInfo h2 {
+    font-size: clamp(22px, 3.8vw, 34px);
+    text-align: center;
+  }
+
+  .why p {
+    font-size: clamp(12px, 1.3vw, 15px);
+  }
+
+  /* Grid */
+  .menuGrid,
+  .galleryGrid,
+  .contactInfo {
+    grid-template-columns: 1fr;
+    gap: clamp(12px, 2vw, 25px);
   }
 
   .galleryGrid {
     grid-template-columns: 1fr;
   }
 
-  .why h2,
-  .menuContainer > h2,
-  .testimonialsContainer > h2,
-  .contactContainer > h2 {
+  /* Cards */
+  .menuCard {
+    padding: clamp(12px, 2vw, 20px);
+  }
+
+  .menuCard img {
+    height: clamp(150px, 50vw, 220px);
+    margin-bottom: 10px;
+    border-radius: 12px;
+  }
+
+  .menuCard h3 {
+    font-size: clamp(14px, 1.6vw, 18px);
+    margin-bottom: 6px;
+  }
+
+  .menuCard p {
+    font-size: clamp(11px, 1vw, 13px);
+    margin-bottom: 10px;
+  }
+
+  .contactCard {
+    padding: clamp(15px, 2.5vw, 30px);
+    border-radius: 16px;
+  }
+
+  .contactCard i {
+    font-size: clamp(24px, 3.5vw, 36px);
+    margin-bottom: 10px;
+  }
+
+  .contactCard h3 {
+    font-size: clamp(14px, 1.6vw, 18px);
+  }
+
+  .contactCard p {
+    font-size: clamp(11px, 1vw, 13px);
+  }
+
+  /* Testimonials */
+  .slide {
+    min-height: 180px;
+    padding: clamp(15px, 2.5vw, 30px);
+  }
+
+  .testimonialText {
+    font-size: clamp(12px, 1.5vw, 16px);
+    margin-bottom: 12px;
+  }
+
+  .testimonialAuthor {
+    font-size: clamp(12px, 1.2vw, 14px);
+  }
+
+  .sliderDots {
+    gap: 10px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Location */
+  .locationInfo h2 {
     text-align: center;
+  }
+
+  .locationText {
+    font-size: clamp(11px, 1.1vw, 13px);
+    margin: clamp(8px, 1vw, 12px) 0;
+    justify-content: flex-start;
+  }
+
+  .mapBox {
+    border-radius: 16px;
+  }
+
+  .mapBox iframe {
+    height: clamp(200px, 50vw, 300px);
+  }
+
+  /* CTA */
+  .ctaContainer {
+    padding: clamp(20px, 3vw, 50px);
+    border-radius: 20px;
+  }
+
+  .ctaContainer h2 {
+    font-size: clamp(20px, 3vw, 32px);
+    margin-bottom: clamp(12px, 1.5vw, 20px);
+  }
+
+  .ctaContainer p {
+    font-size: clamp(12px, 1.2vw, 15px);
+    margin-bottom: clamp(20px, 3vw, 30px);
+  }
+
+  /* Footer */
+  .footer {
+    padding: clamp(25px, 3vw, 50px) clamp(12px, 3vw, 30px);
+  }
+
+  .footerContainer {
+    grid-template-columns: 1fr;
+    gap: clamp(15px, 2.5vw, 35px);
+  }
+
+  .footerSection h3 {
+    font-size: clamp(14px, 1.6vw, 18px);
+    margin-bottom: 12px;
+  }
+
+  .footerSection p {
+    font-size: clamp(11px, 0.95vw, 13px);
+    line-height: 1.5;
+  }
+
+  .footerSection a {
+    font-size: clamp(11px, 0.95vw, 13px);
+    margin-bottom: 6px;
+  }
+
+  .socialIcons {
+    gap: 10px;
+  }
+
+  .socialIcons a {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .footerBottom {
+    font-size: clamp(10px, 0.85vw, 12px);
+    padding-top: clamp(12px, 1.5vw, 20px);
+  }
+
+  /* Gallery Overlay */
+  .galleryOverlay {
+    opacity: 0.7;
+  }
+
+  .galleryBtn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    padding: 15px;
+  }
+
+  .lightboxImg {
+    max-width: 95%;
+    max-height: 80vh;
+  }
+
+  .lightboxClose {
+    top: 15px;
+    right: 15px;
+    font-size: 32px;
+  }
+
+  /* Hamburger Menu Animation */
+  .navLinks.active {
+    max-height: 400px;
+    padding: 12px 0;
+  }
+
+  .navLinks a {
+    padding: 10px clamp(12px, 3vw, 25px);
+    font-size: clamp(12px, 1.1vw, 14px);
   }
 }
